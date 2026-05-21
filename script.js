@@ -164,7 +164,7 @@ bookBtnIkeja.addEventListener('click', () => {
     localStorage.setItem('location', 'Ikeja City Mall');
 
     // Go to confirmation page
-    window.location.href = '/confirmation.html';
+    window.location.href = './confirmation.html';
 });
 
 //PASSING LEKKI INFO
@@ -198,7 +198,7 @@ bookBtnLekki.addEventListener('click', () => {
     localStorage.setItem('location', 'Lekki Phase 1');
 
     // Go to confirmation page
-    window.location.href = '/confirmation.html';
+    window.location.href = './confirmation.html';
 });
 
 //PASSING VICTORIA INFO
@@ -232,7 +232,7 @@ bookBtnVictoria.addEventListener('click', () => {
     localStorage.setItem('location', 'Victoria Island');
 
     // Go to confirmation page
-    window.location.href = '/confirmation.html';
+    window.location.href = './confirmation.html';
 });
 //PASSING YABA INFO
 const bookBtnYaba = document.getElementById('bookBtn-yaba');
@@ -265,5 +265,5 @@ bookBtnYaba.addEventListener('click', () => {
     localStorage.setItem('location', 'Yaba Central');
 
     // Go to confirmation page
-    window.location.href = '/confirmation.html';
+    window.location.href = './confirmation.html';
 });
