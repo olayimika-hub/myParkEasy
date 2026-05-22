@@ -22,7 +22,12 @@
         <header class="topbar">
             <div class="brand-row">
                 <img src="./Images/OIN-removebg-preview.png" alt="ParkEasy Logo" width="80px">
-            <a href="#home" class="logo">ParkEasy</a>
+                <a href="#home" class="logo">ParkEasy</a>
+                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 17h14M5 12h14M5 7h14" />
+                </svg>
+
             <!-- <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation menu">
                 <span></span>
                 <span></span>
@@ -55,7 +60,7 @@
                         </div>
                         <div>
                             <strong>4.5</strong>
-                            <span>Ratings from drivers</span>
+                            <span>Driver's ratings</span>
                         </div>
                         <div>
                             <strong>120+</strong>
@@ -309,7 +314,7 @@
                 <!-- Selections -->
                 <div class="menu0">
                     <div class="contact-details">
-                        <input type="text" placeholder="Enter your fullname" id="fullName-ikeja">
+                        <input type="text" placeholder="Enter your full name" id="fullName-ikeja">
                         <input type="text" placeholder="Vehicle registration Number" id="email-ikeja">
                         <input type="text" placeholder="Enter your phone number" id="phone-ikeja">
                     </div>  
@@ -336,7 +341,7 @@
                             <option>PE 609</option>
                         </select>
                         <select class="select" id="duration-ikeja">
-                            <option selected disabled>Select a duration</option>
+                            <option selected disabled>Select duration</option>
                             <option>1 hour</option>
                             <option>2 hours</option>
                             <option>3 hours</option>
@@ -352,6 +357,7 @@
                         </select>
                         <div class="time-selection">
                             <select class="time" id="startTime-ikeja">
+                                <option selected disabled>Arrival time</option>
                                 <option>01:00</option>
                                 <option>02:00</option>
                                 <option>03:00</option>
@@ -412,7 +418,7 @@
                 <!-- Selections -->
                 <div class="menu0">
                     <div class="contact-details">
-                            <input type="text" placeholder="Enter your fullname" id="fullName-lekki">
+                            <input type="text" placeholder="Enter your full name" id="fullName-lekki">
                             <input type="text" placeholder="Vehicle registration number" id="email-lekki">
                             <input type="text" placeholder="Enter your phone number" id="phone-lekki">
                     </div>  
@@ -439,7 +445,7 @@
                             <option>PE 809</option>
                         </select>
                         <select class="select" id="duration-lekki">
-                            <option selected disabled>Select a duration</option>
+                            <option selected disabled>Select duration</option>
                             <option>1 hour</option>
                             <option>2 hours</option>
                             <option>3 hours</option>
@@ -455,6 +461,7 @@
                         </select>
                         <div class="time-selection">
                             <select class="time" id="startTime-lekki">
+                                <option selected disabled>Arrival time</option>
                                 <option>01:00</option>
                                 <option>02:00</option>
                                 <option>03:00</option>
@@ -512,7 +519,7 @@
             <!-- Selection -->
             <div class="menu0">
                 <div class="contact-details">
-                    <input type="text" placeholder="Enter your fullname" id="fullName-victoria">
+                    <input type="text" placeholder="Enter your full name" id="fullName-victoria">
                     <input type="text" placeholder="Vehicle registration number" id="email-victoria">
                     <input type="text" placeholder="Enter your phone number" id="phone-victoria">
                 </div>
@@ -539,7 +546,7 @@
                         <option>PE 639</option>
                     </select>
                     <select class="select" id="duration-victoria">
-                        <option selected disabled>Select a duration</option>
+                        <option selected disabled>Select duration</option>
                         <option>1 hour</option>
                         <option>2 hours</option>
                         <option>3 hours</option>
@@ -555,6 +562,7 @@
                     </select>
                     <div class="time-selection">
                             <select class="time" id="startTime-victoria">
+                                <option selected disabled>Arrival time</option>
                                 <option>01:00</option>
                                 <option>02:00</option>
                                 <option>03:00</option>
@@ -612,7 +620,7 @@
             <!-- Selections -->
             <div class="menu0">
                 <div class="contact-details">
-                    <input type="text" placeholder="Enter your fullname" id="fullName-yaba">
+                    <input type="text" placeholder="Enter your full name" id="fullName-yaba">
                     <input type="text" placeholder="Vehicle registration number" id="email-yaba">
                     <input type="text" placeholder="Enter your phone number" id="phone-yaba">
                 </div>
@@ -639,7 +647,7 @@
                         <option>PE 909</option>
                         </select>
                         <select class="select" id="duration-yaba">
-                            <option selected disabled>Select a duration</option>
+                            <option selected disabled>Select duration</option>
                             <option>1 hour</option>
                             <option>2 hours</option>
                             <option>3 hours</option>
@@ -655,6 +663,7 @@
                         </select>
                         <div class="time-selection">
                             <select class="time" id="startTime-yaba">
+                                <option selected disabled>Arrival time</option>
                                 <option>01:00</option>
                                 <option>02:00</option>
                                 <option>03:00</option>
@@ -737,14 +746,14 @@
         <!-- CTA Section -->
         <section class="section cta-section">
             <div class="cta-card fade-in">
-            <h2>Ready to Park Smarter?</h2>
-            <p>Start reserving premium parking spots with confidence and simplicity.</p>
+                <h2>Ready to Park Smarter?</h2>
+                <p>Start reserving premium parking spots with confidence and simplicity.</p>
             <a href="#spots" class="btn btn-primary">Get Started</a>
             </div>
         </section>
 
         <!-- Frequently Asked Questions Section -->
-        <section class="section testimonials-section" aria-labelledby="faq-heading" class="cta-card fade-in">
+        <section class="section faq-section" aria-labelledby="faq-heading" class="cta-card fade-in">
             <div class="section-header">
                 <p class="section-label">FAQs</p>
                 <h2 id="faq-heading">Got questions? We’ve got answers.</h2>
