@@ -1019,6 +1019,9 @@ textarea{
 }
 }
 
+/* =========================
+MOBILE VIEW
+========================= */
 @media (max-width: 520px) {
     .hero-section {
         padding-top: 24px;

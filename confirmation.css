@@ -121,3 +121,95 @@ span {
     background: linear-gradient(135deg, #3bbf9b, #5b7dff);
     box-shadow: 0 32px 80px rgba(59, 191, 155, 0.24);
 }
+
+
+/* =========================
+MOBILE VIEW
+========================= */
+@media (max-width: 520px){
+
+    body{
+        padding: 0px 0px;
+    }
+
+    .main{
+        width: 100%;
+        padding: 20px 5px;
+        margin: 0 auto;
+        /* border-radius: 18px; */
+    }
+
+    .confirm{
+        font-size: 38px;
+        width: 30px;
+        padding: 4px 16px;
+    }
+
+    .main1{
+        font-size: 1.3rem;
+    }
+
+    .main2{
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .main5,
+    .main6{
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .details{
+        width: 85%;
+        padding: 12px;
+        border-radius: 16px;
+    }
+
+    .main3{
+        font-size: 1.15rem;
+        padding-bottom: 10px;
+    }
+
+    .seperation{
+        /* flex-direction: column; */
+        /* align-items: flex-start; */
+        gap: 4px;
+        margin-bottom: 14px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #2a4881;
+    }
+
+    .main4{
+        width: 43%;
+        border-right: 2px solid #2a4881;
+        padding-bottom: 4px;
+        margin-right: 10px;
+        font-size: 0.85rem;
+    }
+
+    span{
+        width: 100%;
+        margin: 0;
+        font-size: 0.9rem;
+        word-break: break-word;
+        margin-top: 5px;
+    }
+
+    .time{
+        width: 100%;
+        /* height: auto; */
+        font-size: 1.1rem;
+        gap: 4px;
+        margin-top: 0px;
+    }
+
+    .btn{
+        width: 85%;
+        /* margin-top: 18px; */
+        padding: 12px;
+        justify-content: center;
+        margin: 16px;
+        /* margin-right: 25px; */
+    }
+}

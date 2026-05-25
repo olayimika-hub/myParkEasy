@@ -25,7 +25,7 @@ const fadeObserver = new IntersectionObserver((entries) => {
 
 fadeItems.forEach((item) => fadeObserver.observe(item));
 
-
+//IKEJA POPUP
 const openIkeja = document.getElementById('openIkeja');
 const ikejaMall = document.getElementById('ikejaMall');
 const closeIkeja = document.getElementById('closeIkeja');
@@ -41,6 +41,7 @@ closeIkeja.addEventListener('click', () => {
     mainPage.classList.remove('blur');
 });
 
+//LEKKI POPUP
 const openLekki = document.getElementById('openLekki');
 const lekkiPhase1 = document.getElementById('lekkiPhase1');
 const closeLekki = document.getElementById('closeLekki');
@@ -55,6 +56,7 @@ closeLekki.addEventListener('click', () => {
     lekkiPhase1.style.display = 'none';
     mainPage.classList.remove('blur');  });
 
+//VICTORIA ISLAND POPUP
 const openVictoria = document.getElementById('openVictoria');
 const victoriaIsland = document.getElementById('victoriaIsland');
 const closeVictoria = document.getElementById('closeVictoria');
@@ -70,6 +72,7 @@ closeVictoria.addEventListener('click', () => {
     mainPage.classList.remove('blur');
 });
 
+//YABA POPUP
 const openYaba = document.getElementById('openYaba');
 const yabaCentral = document.getElementById('yabaCentral');
 const closeYaba = document.getElementById('closeYaba');
@@ -84,6 +87,7 @@ closeYaba.addEventListener('click', () => {
     mainPage.classList.remove('blur');
 }); 
 
+//DISPLAY LOCATIONS FROM PANEL CHIP
 const panelChip = document.getElementById('panelChip');
 // const victoriaIsland = document.getElementById('victoriaIsland');
     panelChip.addEventListener('click', () => {
@@ -100,6 +104,7 @@ const panelChip2 = document.getElementById('panelChip2');
     ikejaMall.style.display = 'flex';
 });
 
+//SWITCHING LOCATIONS BETWEEN THE PANELS
 const heroVisual = document.getElementById('hero-visual');
 const heroVisual1 = document.getElementById('hero-visual1');
 const heroVisual2 = document.getElementById('hero-visual2');
