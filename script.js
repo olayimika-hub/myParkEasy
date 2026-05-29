@@ -272,3 +272,11 @@ bookBtnYaba.addEventListener('click', () => {
     // Go to confirmation page
     window.location.href = './confirmation.html';
 });
+
+//HAMBURGER FUNCTION
+const hamburger = document.getElementById('hamburger');
+const heroLinks = document.getElementById('hero-links');
+
+hamburger.addEventListener('click', () =>{
+    heroLinks.classList.toggle('active');
+})
