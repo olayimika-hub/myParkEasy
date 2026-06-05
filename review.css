@@ -8,13 +8,14 @@ button{
     min-width: 140px;
     text-decoration: none;
     border: 1px solid transparent;
-    color: #cdd5ff;
+    color: white;
     border-color: rgba(148, 163, 184, 0.25);
     background: rgba(255, 255, 255, 0.04);
 }
 button a{
     text-decoration: none;
     font-size: 15px;
+    
 }
 button:hover{
     transform: translateY(-2px);
@@ -85,19 +86,28 @@ hr{
     background: #334155;
     margin: 20px 0;
 }
+.Up{
+    position: fixed;
+    font-size: 25px;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 50px;
+    text-decoration: none;
+    background: rgba(99, 102, 241, 0.16);
+    color: #9ca3ff;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+}
 
 .footer {
     margin: 16px 36px;
     padding-top: 32px;
     border-top: 1px solid rgba(148, 163, 184, 0.12);
-}
-.footer-logo{
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 1.35rem;
-    letter-spacing: -0.03em;
-    color: #e7edf8;
-    text-decoration: none;
 }
 
 .footer-grid {
@@ -180,6 +190,10 @@ hr{
         /* width: 590px; */
         display: flex;
         /* font-size: 10px; */
+    }
+    .footer-links a,
+    .social-links  a{
+        text-decoration: none;
     }
     .foot{
         display:flex;
