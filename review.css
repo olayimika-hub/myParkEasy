@@ -103,6 +103,13 @@ hr{
     cursor: pointer;
     z-index: 9999;
 }
+.logo {
+    font-weight: 800;
+    font-size: 1.35rem;
+    letter-spacing: -0.03em;
+    color: #e7edf8;
+    text-decoration: none;
+}
 
 .footer {
     margin: 16px 36px;
@@ -121,7 +128,7 @@ hr{
     align-items: center;
     justify-content: space-between;
     margin-top: 28px;
-    margin-right: 240px;
+    margin-right: 260px;
 }
 .footer p {
     color: #9ca6c7;
@@ -132,12 +139,14 @@ hr{
 .social-links {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 14px;  
 }
 
 .footer-links a,
 .social-links a {
     color: #cbd4ec;
+    text-decoration: none;
+    font-size: 1.1rem;
 }
 
 .footer-links a:hover,
@@ -150,6 +159,8 @@ hr{
     color: #7f8cb3;
     font-size: 0.95rem;
 }
+
+
 
 @media (max-width: 520px){
 
