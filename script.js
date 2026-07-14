@@ -280,3 +280,39 @@ const heroLinks = document.getElementById('hero-links');
 hamburger.addEventListener('click', () =>{
     heroLinks.classList.toggle('active');
 })
+
+heroLinks.addEventListener('click', () => {
+    heroLinks.classList.remove('active');
+})
+
+emailjs.init({
+    publicKey: "2SOUWwWWHucF87xKD",
+});
+
+const form = document.getElementById("Support-form");
+
+form.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_pm1zm1a",
+        "template_8spdae4",
+        this
+    )
+    .then(() => {
+
+        alert("Message sent successfully!");
+
+        form.reset();
+
+    })
+    .catch(error => {
+
+        console.error(error);
+
+        alert("Failed to send message.");
+
+    });
+
+});

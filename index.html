@@ -782,14 +782,15 @@
         
         
         <!-- Contact Support Section -->
-        <section id="Support-form">
+        <form id="Support-form">
             <h3>We're here to assist you!</h3>
-            <input type="text" placeholder="Enter your Full Name">
-            <input type="email" placeholder="Enter your email address">
-            <textarea name="message" id="" placeholder="Describe your issue or inquiry"></textarea>
-            <button class="btn btn-primary">Submit</button>
-        </section>
+            <input type="text" name="name" placeholder="Enter your Full Name" required>
+            <input type="email" name="email" placeholder="Enter your email address" required>
+            <textarea name="message" id="" placeholder="Describe your issue or inquiry" required></textarea>
+            <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+        </form>
 
+        <!-- About Us Section -->
         <section class="Us" data-aos="fade-up">
             <p class="About-label">About Us</p>
             <h2 id="AboutUs-heading">Learn More About ParkEasy</h2>
@@ -830,7 +831,7 @@
         
     </footer>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
