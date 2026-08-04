@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+        <link rel="icon" type="image/png" href="./Screenshot_16-removebg-preview.png">
+
+</head>
+<body>
+    <body>
+        <div class="dashboard">
+        <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="logo">
+                    <h2>ParkEasy</h2>
+                    <span>Partner Portal</span>
+                </div>
+                <ul>
+                    <li class="active">Dashboard</li>
+                    <li>Parking Spots</li>
+                    <li>Reservations</li>
+                    <li>Reports</li>
+                    <li>Add Parking Lot</li>
+                    <li>Support</li>
+                </ul>
+            </aside>
+
+        <!-- MAIN CONTENT -->
+            <main class="content">
+            <!-- TOPBAR -->
+                <header class="topbar">
+                    <div>
+                        <h2>Hello Adewumi👋</h2>
+                        <p>ABC Parking Ltd.</p>
+                    </div>
+                    <div class="top-right">
+                        <img src="./Images/20250314_133119.jpg" alt="Profile">
+                    </div>
+                </header>
+
+        <!-- STATISTICS -->
+            <section class="stats">
+                <div class="card">
+                    <h3>Total Facilities</h3>
+                    <span>3</span>
+                </div>
+                <div class="card">
+                    <h3>Total Spaces</h3>
+                    <span>250</span>
+                </div>
+                <div class="card">
+                    <h3>Available</h3>
+                    <span>128</span>
+                </div>
+                <div class="card">
+                    <h3>Today's Reservations</h3>
+                    <span>94</span>
+                </div>
+            </section>
+
+        <!-- PARKING LOTS -->
+            <section class="lots">
+                <div class="section-title">
+                    <h2>Your Parking Facilities</h2>
+                    <button>Add New</button>
+                </div>
+                <div class="lot-grid">
+                    <div class="lot">
+                        <h3>Ikeja City Mall</h3>
+                        <p>150 Parking Spaces</p>
+                        <span class="open">Open</span>
+                        <button>Manage</button>
+                    </div>
+                    <div class="lot">
+                        <h3>Lekki Central</h3>
+                        <p>100 Parking Spaces</p>
+                        <span class="open">Open</span>
+                        <button>Manage</button>
+                    </div>
+                    <div class="lot">
+                        <h3>Victoria Island</h3>
+                        <p>100 Parking Spaces</p>
+                        <span class="closed">Closed</span>
+                        <button>Manage</button>
+                    </div>
+                </div>
+            </section>
+
+        <!-- RECENT RESERVATIONS -->
+            <section class="reservations">
+                <div class="section-title">
+                    <h2>Recent Reservations</h2>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Reservation ID</th>
+                            <th>Driver</th>
+                            <th>Spot</th>
+                            <th>Arrival</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>I0023</td>
+                            <td>Adeosun Faith</td>
+                            <td>PE505</td>
+                            <td>2:00 PM</td>
+                            <td><span class="status active">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td>L031</td>
+                            <td>Faith Nwabali</td>
+                            <td>PE802</td>
+                            <td>2:00 PM</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>V024</td>
+                            <td>Mary James</td>
+                            <td>PE634</td>
+                            <td>3:30 PM</td>
+                            <td><span class="status reserved">Reserved</span></td>
+                        </tr>
+                        <tr>
+                            <td>L124</td>
+                            <td>Sulaimon Moses</td>
+                            <td>PE507</td>
+                            <td>3:30 PM</td>
+                            <td><span class="status active">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td>V025</td>
+                            <td>David Ade</td>
+                            <td>PE442</td>
+                            <td>11:00 AM</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>I025</td>
+                            <td>Olanipekun Jacob</td>
+                            <td>PE601</td>
+                            <td>11:00 AM</td>
+                            <td><span class="status reserved">Reserved</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        <!-- REPORTS -->
+            <section class="reports">
+                <div class="section-title">
+                    <h2>Weekly Reservation Overview</h2>
+                </div>
+                <div class="chart">
+                    <div style="height:45%;"></div>
+                    <div style="height:80%;"></div>
+                    <div style="height:90%;"></div>
+                    <div style="height:65%;"></div>
+                    <div style="height:75%;"></div>
+                    <div style="height:60%;"></div>
+                    <div style="height:90%;"></div>
+                </div>
+            </section>
+            <div class="weekdays">
+                <h4>Sunday</h4>
+                <h4>Monday</h4>
+                <h4>Tuesday</h4>
+                <h4>Wednesday</h4>
+                <h4>Thursday</h4>
+                <h4>Friday</h4>
+                <h4>Saturday</h4>
+            </div>
+
+            <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-grid">
+            <div>
+                <a href="#home" class="footer-logo">ParkEasy</a>
+                <p>Premium parking reservations built for modern cities.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#spots">Spots</a>
+                <a href="#AboutUs-heading">About Us</a>
+                <a href="#Support-form">Contact</a>
+            </div>
+            <div class="social-links">
+                <a href="https://x.com/Omo_Iya_Nike" aria-label="ParkEasy on Twitter">Twitter</a>
+                <a href="https://www.linkedin.com/in/ogunsanmi-olayimika-a9465625b/" aria-label="ParkEasy on LinkedIn">LinkedIn</a>
+                <a href="#" aria-label="ParkEasy on Instagram">Instagram</a>
+                <a href="mailto:Ogunsanmiolayimika@gmail.com" aria-label="ParkEasy on Email">Email</a>
+            </div>
+        </div>
+        <div class="foot">
+            <p>© 2026 ParkEasy. All rights reserved.</p>
+            <img src="./Images/OIN-removebg-preview.png" alt="" width="120px">
+        </div>
+    </footer>
+
+        </main>
+        
+
+</div>
+</body>
+</html>

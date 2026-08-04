@@ -901,8 +901,7 @@ textarea{
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
-    gap: 28px;
+    grid-template-columns: 2.1fr 1.0fr 0.4fr;
     align-items: start;
 }
 .foot{
@@ -910,11 +909,12 @@ textarea{
     align-items: center;
     justify-content: space-between;
     margin-top: 28px;
-    margin-right: 210px;
+    margin-right:40px;
 }
 .footer p {
     color: #9ca6c7;
     max-width: 320px;
+    font-size: 0.95rem;
 }
 
 .footer-links,
@@ -928,18 +928,12 @@ textarea{
 .social-links a {
     color: #cbd4ec;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .footer-links a:hover,
 .social-links a:hover {
     color: #8b96ff;
-}
-
-.footer-note {
-    margin-top: 28px;
-    color: #7f8cb3;
-    font-size: 0.95rem;
 }
 
 
