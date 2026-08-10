@@ -307,36 +307,6 @@ iframe{
     width: 400px;
     height: 200px;
 }
-
-
-
-
-/* .visual-graph {
-    display: flex;
-    align-items: flex-end;
-    gap: 10px;
-    margin: 24px 0;
-    min-height: 164px;
-} */
-
-/* .graph-bar {
-    width: 14px;
-    border-radius: 999px;
-    background: linear-gradient(180deg, #647def 0%, #2ec5af 100%);
-} */
-
-/* .graph-bar.short {
-    height: 48px;
-}
-
-.graph-bar.medium {
-    height: 92px;
-} */
-
-/* .graph-bar.tall {
-    height: 138px;
-} */
-
 .visual-footer {
     gap: 10px;
     flex-wrap: wrap;

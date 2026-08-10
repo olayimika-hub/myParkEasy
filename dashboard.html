@@ -14,21 +14,20 @@
         <!-- SIDEBAR -->
             <aside class="sidebar">
                 <div class="logo">
-                    <h2>ParkEasy</h2>
+                    <a href="./index.html"><h2>ParkEasy</h2></a>
                     <span>Partner Portal</span>
                 </div>
                 <ul>
-                    <li class="active">Dashboard</li>
-                    <li>Parking Spots</li>
-                    <li>Reservations</li>
-                    <li>Reports</li>
-                    <li>Add Parking Lot</li>
-                    <li>Support</li>
+                    <li class="active"><a href="#top">Dashboard</a></li>
+                    <li><a href="#lots">Parking Spots</a></li>
+                    <li><a href="#reservations">Reservations</a></li>
+                    <li><a href="#reports">Reports</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </aside>
 
         <!-- MAIN CONTENT -->
-            <main class="content">
+            <main class="content" id="top">
             <!-- TOPBAR -->
                 <header class="topbar">
                     <div>
@@ -61,7 +60,7 @@
             </section>
 
         <!-- PARKING LOTS -->
-            <section class="lots">
+            <section class="lots" id="lots">
                 <div class="section-title">
                     <h2>Your Parking Facilities</h2>
                     <button>Add New</button>
@@ -74,24 +73,31 @@
                         <button>Manage</button>
                     </div>
                     <div class="lot">
-                        <h3>Lekki Central</h3>
+                        <h3>Lekki Phase 1</h3>
                         <p>100 Parking Spaces</p>
                         <span class="open">Open</span>
                         <button>Manage</button>
                     </div>
                     <div class="lot">
                         <h3>Victoria Island</h3>
-                        <p>100 Parking Spaces</p>
+                        <p>110 Parking Spaces</p>
                         <span class="closed">Closed</span>
+                        <button>Manage</button>
+                    </div>
+                    <div class="lot">
+                        <h3>Yaba Central</h3>
+                        <p>80 Parking Spaces</p>
+                        <span class="open">Open</span>
                         <button>Manage</button>
                     </div>
                 </div>
             </section>
 
         <!-- RECENT RESERVATIONS -->
-            <section class="reservations">
+            <section class="reservations" id="reservations">
                 <div class="section-title">
                     <h2>Recent Reservations</h2>
+                    <button>View Reservations</button>
                 </div>
                 <table>
                     <thead>
@@ -105,7 +111,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>I0023</td>
+                            <td>I023</td>
                             <td>Adeosun Faith</td>
                             <td>PE505</td>
                             <td>2:00 PM</td>
@@ -115,14 +121,14 @@
                             <td>L031</td>
                             <td>Faith Nwabali</td>
                             <td>PE802</td>
-                            <td>2:00 PM</td>
+                            <td>8:00 AM</td>
                             <td><span class="status completed">Completed</span></td>
                         </tr>
                         <tr>
                             <td>V024</td>
                             <td>Mary James</td>
                             <td>PE634</td>
-                            <td>3:30 PM</td>
+                            <td>1:30 PM</td>
                             <td><span class="status reserved">Reserved</span></td>
                         </tr>
                         <tr>
@@ -143,7 +149,7 @@
                             <td>I025</td>
                             <td>Olanipekun Jacob</td>
                             <td>PE601</td>
-                            <td>11:00 AM</td>
+                            <td>5:00 PM</td>
                             <td><span class="status reserved">Reserved</span></td>
                         </tr>
                     </tbody>
@@ -151,9 +157,10 @@
             </section>
 
         <!-- REPORTS -->
-            <section class="reports">
+            <section class="reports" id="reports">
                 <div class="section-title">
                     <h2>Weekly Reservation Overview</h2>
+                    <p>Week #41</p>
                 </div>
                 <div class="chart">
                     <div style="height:45%;"></div>
@@ -179,14 +186,14 @@
     <footer class="footer" id="contact">
         <div class="footer-grid">
             <div>
-                <a href="#home" class="footer-logo">ParkEasy</a>
+                <a href="./index.html" class="footer-logo">ParkEasy</a>
                 <p>Premium parking reservations built for modern cities.</p>
             </div>
             <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#spots">Spots</a>
-                <a href="#AboutUs-heading">About Us</a>
-                <a href="#Support-form">Contact</a>
+                <a href="./index.html">Home</a>
+                <a href="./index.html">Spots</a>
+                <a href="./index.html">About Us</a>
+                <a href="./index.html">Contact</a>
             </div>
             <div class="social-links">
                 <a href="https://x.com/Omo_Iya_Nike" aria-label="ParkEasy on Twitter">Twitter</a>
