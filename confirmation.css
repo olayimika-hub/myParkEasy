@@ -101,6 +101,13 @@ span {
     color: #f8fafc;
     /* justify-content: center; */
 }
+#downloadReceipt{
+    align-items: center;
+    padding: 5px;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+}
 .btn {
     margin-top: 10px;
     text-decoration: none;
@@ -120,6 +127,67 @@ span {
     transform: translateY(-2px);
     background: linear-gradient(135deg, #3bbf9b, #5b7dff);
     box-shadow: 0 32px 80px rgba(59, 191, 155, 0.24);
+}
+
+@media print {
+
+    /* Hide buttons */
+    #downloadReceipt,
+    .btn {
+        display: none;
+    }
+
+    /* Make the page suitable for printing */
+    body {
+        background: white;
+        color: black;
+    }
+
+    .main {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 20px;
+    }
+
+    .main p {
+        color: black;
+    }
+
+    .main1,
+    .main2,
+    .main3,
+    .main5,
+    .main6 {
+        color: black;
+    }
+
+    .details {
+        background: white;
+        border: 1px solid #ddd;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .main4 {
+        color: #333;
+        border-right: 2px solid #ddd;
+    }
+
+    span {
+        color: black;
+    }
+
+    .seperation {
+        border-bottom-color: #ddd;
+    }
+
+    .main3 {
+        border-bottom-color: #ddd;
+    }
+
 }
 
 

@@ -36,6 +36,7 @@ h1{
     margin-bottom:20px;
 }
 .inputBox input{
+    margin-bottom: 5    px;
     width:100%;
     padding:15px;
     background:#1E3A5F;
@@ -45,6 +46,14 @@ h1{
     font-size:16px;
     margin-bottom:10px;
 }
+#errorEmail,
+#errorPassword{
+    margin: 10px 0px;
+    display: flex;
+    justify-content: right;
+    color: rgb(234, 217, 217);
+}
+
 .options{
     display:flex;
     justify-content:space-between;

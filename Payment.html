@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>!Payment Gateway</title>
+    <link rel="stylesheet" href="Payment.css">
+</head>
+<body>
+    <main class="payment-page">
+
+        <header class="payment-header">
+            <h1>Complete Your Payment</h1>
+            <p>Review your reservation and complete your payment.</p>
+        </header>
+
+
+        <section class="payment-container">
+
+            <!-- BOOKING SUMMARY -->
+            <div class="payment-card">
+                <h2>Booking Summary</h2>
+                <div class="booking-info">
+                    <div class="booking-row">
+                        <span>Location</span>
+                        <span id="paymentLocation"></span>
+                    </div>
+                    <div class="booking-row">
+                        <span>Parking Spot</span>
+                        <span id="paymentLot"></span>
+                    </div>
+                    <div class="booking-row">
+                        <span>Duration</span>
+                        <span id="paymentDuration"></span>
+                    </div>
+                    <div class="booking-row">
+                        <span>Hourly Rate</span>
+                        <span id="paymentPrice"></span>
+                    </div>
+                    <div class="total-row">
+                        <span>Total</span>
+                        <span class="total-price" id="paymentTotal">
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAYMENT -->
+            <div class="payment-card">
+                <h2>Payment Details</h2>
+                <form id="paymentForm">
+                    <div class="form-group">
+                        <label for="cardNumber">
+                            Card Number
+                        </label>
+                        <input
+                            type="text"
+                            id="cardNumber"
+                            placeholder="1234 5678 9012 3456"
+                        >
+                    </div>
+                    <div class="payment-row">
+                        <div class="form-group">
+                            <label for="expiry">
+                                Expiry Date
+                            </label>
+                            <input
+                                type="text"
+                                id="expiry"
+                                placeholder="MM/YY"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">
+                                CVV
+                            </label>
+                            <input
+                                type="text"
+                                id="cvv"
+                                placeholder="123"
+                            >
+                        </div>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="pay-button"
+                        id="payButton"
+                    >
+                        
+                    </button>
+                </form>
+                <p class="secure-payment">
+                    🔒 This is a dummy payment gateway for ParkEasy.
+                </p>
+            </div>
+
+        </section>
+        <script>
+            // console.log("Location:", localStorage.getItem('location'));
+            // console.log("Lot:", localStorage.getItem('lot'));
+            // console.log("Duration:", localStorage.getItem('duration'));
+            // console.log("Price:", localStorage.getItem('price'));
+            // console.log("Total:", localStorage.getItem('total'));
+            // Get booking information from localStorage
+
+            const parkinglocation = localStorage.getItem('location');
+            const lot = localStorage.getItem('lot');
+            const duration = localStorage.getItem('duration');
+            const price = localStorage.getItem('price');
+            const total = localStorage.getItem('total');
+
+            // Display booking information
+            document.getElementById('paymentLocation').textContent = parkinglocation;
+            document.getElementById('paymentLot').textContent = lot;
+            document.getElementById('paymentDuration').textContent =
+                duration + ' hours';
+            document.getElementById('paymentPrice').textContent =
+                '₦' + Number(price).toLocaleString() + ' / hour';
+            document.getElementById('paymentTotal').textContent =
+                '₦' + Number(total).toLocaleString();
+
+            // Update Pay button
+            document.getElementById('payButton').textContent =
+                'Pay ₦' + Number(total).toLocaleString();
+
+            // Handle payment
+            const paymentForm = document.getElementById('paymentForm');
+            paymentForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+             // Dummy payment successful
+            // localStorage.setItem('paymentStatus', 'Paid');
+
+            // Go to confirmation page
+            window.location.href = '/confirmation.html';
+
+            });
+
+    </script>
+
+    </main>
+</body>
+</html>

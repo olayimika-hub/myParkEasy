@@ -29,7 +29,6 @@ fadeItems.forEach((item) => fadeObserver.observe(item));
 const openIkeja = document.getElementById('openIkeja');
 const ikejaMall = document.getElementById('ikejaMall');
 const closeIkeja = document.getElementById('closeIkeja');
-// const mainPage = document.getElementById('mainPage');
 
 openIkeja.addEventListener('click', () => {
     ikejaMall.style.display = 'flex';
@@ -39,6 +38,8 @@ openIkeja.addEventListener('click', () => {
 closeIkeja.addEventListener('click', () => {
     ikejaMall.style.display = 'none';
     mainPage.classList.remove('blur');
+
+
 });
 
 //LEKKI POPUP
@@ -150,8 +151,40 @@ bookBtnIkeja.addEventListener('click', () => {
     const startMeridiem = document.getElementById('startMeridiem-ikeja').value;
     const now = new Date();
     const timestamp = now.toLocaleTimeString() + " | " + now.toLocaleDateString() ;
-    // const endTime = document.getElementById('endTime').value;
-    // const endMeridiem = document.getElementById('endMeridiem').value;
+    
+    //Price
+    const price = 500 
+    //Calculate Price
+    const total = price * Number(duration)
+    // Save payment information
+    localStorage.setItem('price', price);
+    localStorage.setItem('total', total);
+
+    // Valiating the form
+    if(fullName === ""){
+        alert("please enter your full name")
+        return;
+    }
+    if(email ===""){
+        alert("please enter your email")
+        return;
+    }
+    if(phone ===""){
+        alert("please enter your Phone No.")
+        return;
+    }
+    if(lot === "Select a parking spot"){
+        alert("Please select Parking spot")
+        return;
+    }
+    if(duration === "Select duration"){
+        alert("Please fill in the field")
+        return;
+    }
+    if(startTime === "Arrival time"){
+        alert("Please fill in thr field")
+        return;
+    }
 
     // save Data to localStorage
     localStorage.setItem('fullName', fullName);
@@ -162,14 +195,15 @@ bookBtnIkeja.addEventListener('click', () => {
     localStorage.setItem('startTime', startTime);
     localStorage.setItem('startMeridiem', startMeridiem);
     localStorage.setItem("timestamp", timestamp);
-    // localStorage.setItem('endTime', endTime);
-    // localStorage.setItem('endMeridiem', endMeridiem);
+    
 
     //Save location to localStorage
     localStorage.setItem('location', 'Ikeja City Mall');
+    
 
     // Go to confirmation page
-    window.location.href = './confirmation.html';
+    window.location.href = './Payment.html';
+    
 });
 
 //PASSING LEKKI INFO
@@ -184,8 +218,40 @@ bookBtnLekki.addEventListener('click', () => {
     const startMeridiem = document.getElementById('startMeridiem-lekki').value;
     const now = new Date();
     const timestamp = now.toLocaleTimeString() + " | " + now.toLocaleDateString() ;
-    // const endTime = document.getElementById('endTime').value;
-    // const endMeridiem = document.getElementById('endMeridiem').value;
+
+    //Price
+    const price = 600 
+    //Calculate Price
+    const total = price * Number(duration)
+    // Save payment information
+    localStorage.setItem('price', price);
+    localStorage.setItem('total', total);
+
+        // Valiating the form
+    if(fullName === ""){
+        alert("please enter your full name")
+        return;
+    }
+    if(email ===""){
+        alert("please enter your email")
+        return;
+    }
+    if(phone ===""){
+        alert("please enter your Phone No.")
+        return;
+    }
+    if(lot === "Select a parking spot"){
+        alert("Please select Parking spot")
+        return;
+    }
+    if(duration === "Select duration"){
+        alert("Please fill in the field")
+        return;
+    }
+    if(startTime === "Arrival time"){
+        alert("Please fill in thr field")
+        return;
+    }
 
     // save Data to localStorage
     localStorage.setItem('fullName', fullName);
@@ -196,14 +262,12 @@ bookBtnLekki.addEventListener('click', () => {
     localStorage.setItem('startTime', startTime);
     localStorage.setItem('startMeridiem', startMeridiem);
     localStorage.setItem("timestamp", timestamp);
-    // localStorage.setItem('endTime', endTime);
-    // localStorage.setItem('endMeridiem', endMeridiem);
 
     //Save location to localStorage
     localStorage.setItem('location', 'Lekki Phase 1');
 
     // Go to confirmation page
-    window.location.href = './confirmation.html';
+    window.location.href = './Payment.html';
 });
 
 //PASSING VICTORIA INFO
@@ -218,8 +282,40 @@ bookBtnVictoria.addEventListener('click', () => {
     const startMeridiem = document.getElementById('startMeridiem-victoria').value;
     const now = new Date();
     const timestamp = now.toLocaleTimeString() + " | " + now.toLocaleDateString() ;
-    // const endTime = document.getElementById('endTime').value;
-    // const endMeridiem = document.getElementById('endMeridiem').value;
+
+    //Price
+    const price = 800 
+    //Calculate Price
+    const total = price * Number(duration)
+    // Save payment information
+    localStorage.setItem('price', price);
+    localStorage.setItem('total', total);
+
+        // Valiating the form
+    if(fullName === ""){
+        alert("please enter your full name")
+        return;
+    }
+    if(email ===""){
+        alert("please enter your email")
+        return;
+    }
+    if(phone ===""){
+        alert("please enter your Phone No.")
+        return;
+    }
+    if(lot === "Select a parking spot"){
+        alert("Please select Parking spot")
+        return;
+    }
+    if(duration === "Select duration"){
+        alert("Please fill in the field")
+        return;
+    }
+    if(startTime === "Arrival time"){
+        alert("Please fill in thr field")
+        return;
+    }
 
     // save Data to localStorage
     localStorage.setItem('fullName', fullName);
@@ -230,14 +326,12 @@ bookBtnVictoria.addEventListener('click', () => {
     localStorage.setItem('startTime', startTime);
     localStorage.setItem('startMeridiem', startMeridiem);
     localStorage.setItem("timestamp", timestamp);
-    // localStorage.setItem('endTime', endTime);
-    // localStorage.setItem('endMeridiem', endMeridiem);
 
     //Save location to localStorage
     localStorage.setItem('location', 'Victoria Island');
 
     // Go to confirmation page
-    window.location.href = './confirmation.html';
+    window.location.href = './Payment.html';
 });
 //PASSING YABA INFO
 const bookBtnYaba = document.getElementById('bookBtn-yaba');
@@ -251,8 +345,40 @@ bookBtnYaba.addEventListener('click', () => {
     const startMeridiem = document.getElementById('startMeridiem-yaba').value;
     const now = new Date();
     const timestamp = now.toLocaleTimeString() + " | " + now.toLocaleDateString() ;
-    // const endTime = document.getElementById('endTime').value;
-    // const endMeridiem = document.getElementById('endMeridiem').value;
+
+    //Price
+    const price = 400
+    //Calculate Price
+    const total = price * Number(duration)
+    // Save payment information
+    localStorage.setItem('price', price);
+    localStorage.setItem('total', total);
+    
+    // Valiating the form
+    if(fullName === ""){
+        alert("please enter your full name")
+        return;
+    }
+    if(email ===""){
+        alert("please enter your email")
+        return;
+    }
+    if(phone ===""){
+        alert("please enter your Phone No.")
+        return;
+    }
+    if(lot === "Select a parking spot"){
+        alert("Please select Parking spot")
+        return;
+    }
+    if(duration === "Select duration"){
+        alert("Please fill in the field")
+        return;
+    }
+    if(startTime === "Arrival time"){
+        alert("Please fill in thr field")
+        return;
+    }
 
     // save Data to localStorage
     localStorage.setItem('fullName', fullName);
@@ -263,14 +389,12 @@ bookBtnYaba.addEventListener('click', () => {
     localStorage.setItem('startTime', startTime);
     localStorage.setItem('startMeridiem', startMeridiem);
     localStorage.setItem("timestamp", timestamp);
-    // localStorage.setItem('endTime', endTime);
-    // localStorage.setItem('endMeridiem', endMeridiem);
 
     //Save location to localStorage
     localStorage.setItem('location', 'Yaba Central');
 
     // Go to confirmation page
-    window.location.href = './confirmation.html';
+    window.location.href = './Payment.html';
 });
 
 //HAMBURGER FUNCTION

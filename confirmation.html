@@ -8,7 +8,7 @@
     <title>ParkEasy | Smart Parking Reservations</title>
 </head>
 <body>
-    <div class="main">
+    <div class="main" id="receipt">
         <div class="confirm">✔</div>
         <p class="main1">Reservation Successful</p>
         <p class="main2">Your parking reservation has been confirmed successfully.</p>
@@ -20,16 +20,21 @@
             <div class="seperation"><h4 class="main4">V.R.N: </h4> <span id="confirmEmail"></span></div>
             <div class="seperation"><h4 class="main4">Phone: </h4> <span id="confirmPhone"></span></div>
             <div class="seperation"><h4 class="main4">Parking Space: </h4> <span id="confirmLot"></span></div>
-            <div class="seperation"><h4 class="main4">Duration: </h4> <span id="confirmDuration"></span></div>
+            <div class="seperation"><h4 class="main4">Duration(Hours): </h4> <span id="confirmDuration"></span></div>
             <div class="seperation"><h4 class="main4">Arrival Time: </h4> <span class="time"><h5 id="confirmStartTime"></h5><h5 id="confirmStartMeridiem"></h5></span></div>
         </div>
         
         
         <p class="main5">Please present this  reservation upon arrival.</p>
+        <button id="downloadReceipt">
+            Download Receipt
+        </button>
         <p class="main6">Thank you for using ParkEasy ❤️</p>
         <a href="./index.html" class="btn">Back to Home</a>
         
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
     <script src="confirmation.js"></script>
 </body>
 </html>

@@ -46,43 +46,48 @@
         <form id="partnerForm">
             <div class="inputBox">
                 <label>Company Name</label>
-                <input type="text" placeholder="ABC Parking Ltd">
+                <input type="text" placeholder="ABC Shopping Mall" class="box">
             </div>
             <div class="inputBox">
                 <label>Business Email</label>
-                <input type="email" placeholder="company@email.com">
+                <input type="email" placeholder="company@email.com" class="box">
+            </div>
+            <div class="inputBox">
+                <label>Password</label>
+                <input type="password" placeholder="Password" class="box" id="password">
+            </div>
+            <div class="inputBox">
+                <label> Confirm Password</label>
+                <input type="password" placeholder="Confirm Password" class="box" id="confirmPassword">
+                <small id="errorPassword"></small>
             </div>
             <div class="inputBox">
                 <label>Phone Number</label>
-                <input type="tel" placeholder="+234 xxx xxx xxxx">
-            </div>
-            <div class="inputBox">
-                <label>Parking Facility Name</label>
-                <input type="text" placeholder="Ikeja City Mall Parking">
+                <input type="tel" placeholder="+234 xxx xxx xxxx" class="box">
             </div>
             <div class="inputBox">
                 <label>State</label>
-                <input type="text" placeholder="Lagos">
+                <input type="text" placeholder="Lagos" class="box">
             </div>
             <div class="inputBox">
                 <label>City</label>
-                <input type="text" placeholder="Ikeja">
+                <input type="text" placeholder="Ikeja" class="box">
             </div>
             <div class="inputBox full">
                 <label>Facility Address</label>
-                <input type="text" placeholder="Enter full address">
+                <input type="text" placeholder="Enter full address" class="box">
             </div>
             <div class="inputBox">
                 <label>Total Parking Spaces</label>
-                <input type="number" placeholder="100">
+                <input type="number" placeholder="100" class="box">
             </div>
             <div class="inputBox">
-                <label>Opening Hours</label>
-                <input type="text" placeholder="24 Hours">
+                <label>Opening Hour</label>
+                <input type="text" placeholder="24 Hours" class="box">
             </div>
             <div class="inputBox">
                 <label>Parking Type</label>
-                <select>
+                <select class="box">
                     <option>Outdoor</option>
                     <option>Indoor</option>
                     <option>Multi-storey</option>
@@ -90,7 +95,7 @@
             </div>
             <div class="inputBox full">
                     <label>Facility Description</label>
-                    <textarea rows="5"
+                    <textarea rows="5" class="box"
                     placeholder="Tell us about your parking facility..."></textarea>
             </div>
             <div class="checkbox">
@@ -137,6 +142,20 @@
         e.preventDefault();
 
         const btn = form.querySelector("button");
+        const inputBoxes = form.querySelectorAll(".box");
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+
+        for (const input of inputBoxes) {
+        if (input.value.trim() === "") {
+            alert("Please fill in all the fields");
+            return;
+        
+    }}
+        if(confirmPassword !== password){
+            document.getElementById("errorPassword").textContent = "Passwords do not match"
+            return;
+        }
 
         btn.innerText = "Registering...";
         btn.disabled = true;
@@ -146,6 +165,8 @@
         }, 1000);
 
         }); 
+
+
     </script>
 </body>
 </html>

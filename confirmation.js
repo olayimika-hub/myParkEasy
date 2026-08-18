@@ -25,8 +25,8 @@ localStorage.getItem("startMeridiem");
 document.getElementById("confirmTimestamp").textContent =
 localStorage.getItem("timestamp");
 
-// document.getElementById("confirmEndTime").textContent =
-// localStorage.getItem("endTime");
+const downloadReceipt = document.getElementById('downloadReceipt');
 
-// document.getElementById("confirmEndMeridiem").textContent =
-// localStorage.getItem("endMeridiem");
+downloadReceipt.addEventListener('click', () => {
+    window.print();
+});
