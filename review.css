@@ -28,6 +28,118 @@ body {
         linear-gradient(180deg, #111827 0%, #0f1726 100%);
 }
 
+/* Review Form */
+#reviewForm {
+    width: 90%;
+    max-width: 650px;
+    margin: 0 auto 50px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 15px;
+}
+
+/* Rating Select */
+#reviewRating {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Dropdown options */
+#reviewRating option {
+    background: #111827;
+    color: white;
+}
+
+/* Review Textarea */
+#reviewText {
+    width: 100%;
+    min-height: 130px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 16px;
+    font-family: inherit;
+    resize: vertical;
+    outline: none;
+}
+
+/* Placeholder */
+#reviewText::placeholder {
+    color: #9ca3af;
+}
+
+/* Focus effects */
+#reviewRating:focus,
+#reviewText:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+/* Submit Button */
+#reviewForm button {
+    align-self: center;
+    min-width: 170px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 999px;
+    background: #6366f1;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 200ms ease, background 200ms ease, box-shadow 200ms ease;
+}
+
+/* Button hover */
+#reviewForm button:hover {
+    transform: translateY(-2px);
+    background: #4f46e5;
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25);
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 35px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+/* Highlight stars when selected */
+.rating input:checked ~ label {
+    color: gold;
+}
+
+/* Highlight stars when hovering */
+.rating label:hover,
+.rating label:hover ~ label {
+    color: gold;
+}
+
 .reviews-section{
     width: 90%;
     max-width: 900px;

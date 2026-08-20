@@ -11,11 +11,36 @@
     <section class="reviews-section" id="reviews">
         <a href="./index.html" id="button"><button>Back</button></a>
         <h2 class="reviews-heading">Reviews</h2>
+        
 
-        <div class="review-card">
-            <div class="review-top">
-                <h3 class="review-name">Caroline Sobowale.</h3>
+        <form id="reviewForm">
+            <textarea 
+                id="reviewText" 
+                placeholder="Write your review..."
+                rows="4">
+            </textarea>
+            <div class="rating">
+                <input type="radio" name="rating" id="star5" value="5">
+                <label for="star5">★</label>
+
+                <input type="radio" name="rating" id="star4" value="4">
+                <label for="star4">★</label>
+
+                <input type="radio" name="rating" id="star3" value="3">
+                <label for="star3">★</label>
+
+                <input type="radio" name="rating" id="star2" value="2">
+                <label for="star2">★</label>
+
+                <input type="radio" name="rating" id="star1" value="1">
+                <label for="star1">★</label>
             </div>
+            <button type="submit">Submit Review</button>
+        </form>
+        <div class="review-card">
+            <!-- <div class="review-top"> -->
+                <h3 class="review-name">Caroline Sobowale.</h3>
+            <!-- </div> -->
             <p class="review-text">
                 "ParkEasy saved me so much time during my morning commute. I never worry about finding a spot anymore."
             </p>
@@ -101,6 +126,8 @@
         </p>
         <div class="stars">★★★★☆</div>
     </div>
+    <div id="userReviews"> <hr></div>
+    
 </section>
 
         <a href="#top" class="Up">
@@ -132,5 +159,78 @@
             <img src="./Images/OIN-removebg-preview.png" alt="" width="120px">
         </div>
     </footer>
+
+    <script>
+        const form = document.getElementById("reviewForm");
+
+        form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const fullName = localStorage.getItem("fullName");
+        const rating = document.querySelector('input[name="rating"]:checked')?.value;
+        const reviewText = document.getElementById("reviewText").value;
+
+        let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+        const review = {
+            name: fullName,
+            rating: rating,
+            text: reviewText
+        };
+        reviews.push(review);
+
+        localStorage.setItem("reviews", JSON.stringify(reviews));
+
+        displayReviews();
+        document.getElementById("reviewForm").reset();
+
+        // console.log(reviews);
+        });
+        function displayReviews(){
+            const savedReviews = JSON.parse(localStorage.getItem("reviews")) || [];
+        // console.log(savedReviews);
+        const userReviews = document.getElementById("userReviews");
+        userReviews.innerHTML = "";
+
+        for (const review of savedReviews) {
+        const reviewCard = document.createElement("div");
+        reviewCard.classList.add("review-card");    
+    
+        const reviewName = document.createElement("h3");
+        reviewName.classList.add("review-name");
+        reviewName.textContent = review.name;
+    
+        const reviewTextElement = document.createElement("p");
+        reviewTextElement.classList.add("review-text");
+        reviewTextElement.textContent = review.text;
+
+        const stars = document.createElement("div");
+        stars.classList.add("stars");
+        if (review.rating === "5") {
+            stars.textContent = "★★★★★";
+        } else if (review.rating === "4") {
+            stars.textContent = "★★★★☆";
+        } else if (review.rating === "3") {
+            stars.textContent = "★★★☆☆";
+        } else if (review.rating === "2") {
+            stars.textContent = "★★☆☆☆";
+        } else if (review.rating === "1") {
+            stars.textContent = "★☆☆☆☆";
+        }
+
+        reviewCard.appendChild(reviewName);
+        reviewCard.appendChild(reviewTextElement);
+        reviewCard.appendChild(stars);
+
+        userReviews.appendChild(reviewCard);
+
+        const line = document.createElement("hr");
+
+        userReviews.appendChild(line);
+        }
+    }
+        
+
+    </script>
 </body>
 </html>

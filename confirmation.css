@@ -108,6 +108,10 @@ span {
     display: flex;
     margin: 0 auto;
 }
+.main7{
+    display: flex;
+    justify-content: space-between;
+}
 .btn {
     margin-top: 10px;
     text-decoration: none;

@@ -43,6 +43,11 @@
             document.getElementById("errorEmail").textContent = "Email is required"
             return;
         }
+        if(email !== "ogunsanmiolayimika@gmail.com"){
+            document.getElementById("errorEmail").textContent = "Email Incorrect"
+            return;
+        }
+        
         if(password === ""){
             document.getElementById("errorPassword").textContent = "Password is required"
             return;
